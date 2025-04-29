@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Saudação Personalizada</title>
+</head>
+<body>
+  <h1>Saudação Personalizada</h1>
+
+  <label for="nomeInput">Digite seu nome:</label>
+  <input type="text" id="nomeInput" placeholder="Seu nome aqui">
+  <button onclick="saudar()">Saudar</button>
+
+  <div id="resultado" style="margin-top:20px; font-size:20px;"></div>
+
+  <script>
+    function saudar() {
+      const nome = document.getElementById("nomeInput").value;
+      const agora = new Date();
+      const hora = agora.getHours();
+      let saudacao = "";
+
+      if (hora >= 0 && hora < 12) {
+        saudacao = "Bom dia";
+      } else if (hora >= 12 && hora < 18) {
+        saudacao = "Boa tarde";
+      } else {
+        saudacao = "Boa noite";
+      }
+
+      document.getElementById("resultado").innerText = saudacao + ", " + nome + "!";
+    }
+  </script>
+</body>
+</html>
+
+<!-- base pra fazer o codigo esse prompt
+ de um exemplo de um código HTML com um input para o nome do usuário, uma saudação que muda conforme o horário usando variáveis de tempo, e concatenação de strings para mostrar a mensagem personalizada. -->

@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador de Cliques</title>
+</head>
+<body>
+  <h1>Contador de Cliques</h1>
+
+  <button onclick="contar()">Clique aqui</button>
+
+  <div id="resultado" style="margin-top: 20px; font-size: 20px;"></div>
+
+  <script>
+    let contador = 0;
+
+    function contar() {
+      contador++;
+      document.getElementById("resultado").innerText = 
+        "Você clicou " + contador + " vez(es)";
+    }
+  </script>
+</body>
+</html>
+
+<!-- base pra fazer o codigo esse prompt
+ me fale um código HTML com um botão que conta quantas vezes foi clicado e mostra o total em uma div usando JavaScript. -->
