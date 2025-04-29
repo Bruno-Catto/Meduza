@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script>
+        function verificarLogin() {
+            const email = document.getElementById("email").value.trim();
+            const senha = document.getElementById("senha").value.trim();
+            const resultado = document.getElementById("resultado");
+
+            if (email === "" || senha === "") {
+                resultado.textContent = "Preencha todos os campos!";
+                resultado.style.color = "red";
+            } else {
+                resultado.textContent = `E-mail: ${email} | Senha: ${senha}`;
+                resultado.style.color = "green";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Login</h1>
+
+    <label for="email">E-mail:</label>
+    <input type="text" id="email" placeholder="Digite seu e-mail"><br><br>
+
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" placeholder="Digite sua senha"><br><br>
+
+    <button id="botao" onclick="verificarLogin()">Entrar</button>
+
+    <div id="resultado" style="margin-top: 15px; font-weight: bold;"></div>
+</body>
+</html>
+
+
+<!-- usei como base pra fazer o codigo esse prompt
+ Me crie um código HTML que tenha dois inputs (um para e-mail e outro para senha), um botão que use getElementById para pegar os valores, e uma div que mostre o resultado na tela -->
