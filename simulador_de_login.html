@@ -10,10 +10,10 @@
             const resultado = document.getElementById("resultado");
 
             if (email === "" || senha === "") {
-                "Preencha todos os campos!";
+                resultado.textContent = "Preencha todos os campos!";
                 resultado.style.color = "red";
             } else {
-                "Login feito";
+                resultado.textContent = "Login Feito!";
                 resultado.style.color = "green";
             }
         }
