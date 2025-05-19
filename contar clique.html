@@ -1,13 +1,14 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <title>Contador de Cliques</title>
 </head>
 <body>
-  <h1>Contador de Cliques</h1>
+  <h1>Conta meus Cliques ai</h1>
 
-  <button onclick="contar()">Clique aqui</button>
+  <button onclick="contar()">click</button>
+  <button onclick="resetar()">resetar</button>
 
   <div id="resultado" style="margin-top: 20px; font-size: 20px;"></div>
 
@@ -18,6 +19,12 @@
       contador++;
       document.getElementById("resultado").innerText = 
         "Você clicou " + contador + " vez(es)";
+    }
+
+    function resetar() {
+      contador = 0;
+      document.getElementById("resultado").innerText = 
+        "Contador reiniciado.";
     }
   </script>
 </body>
